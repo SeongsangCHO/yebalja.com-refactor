@@ -1,0 +1,496 @@
+@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } .nanumbarungothic * { font-family: 'NanumBarunGothic', sans-serif; }
+
+.wrapper {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'NanumBarunGothic';
+}
+
+
+/*
+    Badge
+*/
+
+
+.false {
+    /*filter: grayscale(100%);*/
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.badges {
+    padding-top: 30px;
+    position: relative;
+    margin: 0 auto;
+    width: 92%;
+    max-width: 1200px;
+    padding-bottom: 10px;
+
+}
+
+.true, .false {
+    display: inline;
+}
+
+.badge {
+    max-width: 130px;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 5px;
+    float: right;
+    padding-bottom: 10px;
+}
+
+.tooltip {
+    text-align: center;
+    color: #89A1C3;
+    font-size: 12px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+
+/*
+    Table
+*/
+
+
+.users {
+    /*max-width: 1200px;*/
+    width: 100%;
+    margin: 0 auto;
+    font-family: "NanumBarunGothic";
+    color: #606976;
+    margin-bottom: 170px;
+}
+
+.users * {
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.users {
+    border-radius: 12px;
+    box-shadow: 0 75px 125px -57px #7e8f94;
+    overflow: hidden;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.rowtitle {
+    background-image: linear-gradient(to top, #4A91F5, #4A91F5);
+}
+
+.rowtitle {
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    width: 100%;
+}
+
+.cell {
+    font-size: 16px;
+    font-weight: 700;
+    border-width: 1px 0 0 0;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    min-width: 150px;
+
+}
+
+.cellheader {
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    color: #4A91F5;
+    padding-left: 10px;
+}
+
+.cellheader:hover {
+    text-decoration: none;
+}
+
+.cell:last-child {
+    padding-right: 100px;
+}
+
+.csstable{
+    margin:0;
+}
+
+.thetable .cell {
+
+    padding: 10px;
+}
+
+.thetable .cell:last-child {
+    padding: 0;
+}
+
+.thetable .cell {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.thetable .title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+.table .cell:last-child {
+    line-height: 1.4;
+}
+
+.thetable .row:nth-child(2n), .thetable .rowtitle:nth-child(2n){
+    background-color: #F2F8FF;
+}
+
+.thetable .row:nth-child(2n+1), .thetable .rowtitle:nth-child(2n+1) {
+    background-color: white;
+}
+
+.table .thetable {
+    table-layout: auto;
+    margin: 0;
+    width: 100%;
+}
+
+.thetable {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+}
+
+.cell:first-child:after {
+    color: #89A1C3;
+    font-size: 12px;
+    font-weight: 500;
+    content: '';
+    display: block;
+    left: 0;
+    /*position: absolute;*/
+    /*padding-left: 100px;*/
+    /*text-align: center;*/
+    content-align: center;
+}
+
+
+.row:nth-child(2) .cell:first-child:after {
+    content: '이노베이션 아카데미';
+}
+.row:nth-child(3) .cell:first-child:after {
+    content: '삼성';
+}
+.row:nth-child(4) .cell:first-child:after {
+    content: '네이버';
+}
+.row:nth-child(5) .cell:first-child:after {
+    content: '한국정보산업연합회';
+}
+.row:nth-child(6) .cell:first-child:after {
+    content: '우아한 형제들';
+}
+
+
+/*.cell:first-child {*/
+/*    text-align: center;*/
+/*    padding-left: 50px;*/
+/*    max-width: 165px;*/
+/*    min-width: 140px;*/
+/*}*/
+
+
+@media only screen and (max-width: 900px) {
+
+
+    .thetable .cell:not(:first-child) {
+        text-align: left;
+        padding-left: 180px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        /*max-height: 53px;*/
+
+    }
+
+    .thetable .cellheader {
+        padding-left: 30px;
+    }
+
+    .cell:first-child {
+        max-width: unset;
+        min-width: unset;
+    }
+
+    .cell:first-child:after {
+        display: none;
+    }
+    .thetable, .row, .cell, .rowtitle{
+        display: block;
+    }
+
+    .thetable .cell:nth-child(1) {
+    background-color: #4A91F5;
+    /*background-image: linear-gradient(to top right, #4A91F5, #4DF0FF);*/
+}
+    .thetable .cellheader:nth-child(1) {
+        color: white;
+        border-style: none;
+    }
+
+    .cell {
+        border-width: 0;
+
+    }
+    .cell:nth-child(2n) {
+
+        background-color: #F2F8FF;
+    }
+
+    .cell:nth-child(2n+1) {
+        background-color: white;
+    }
+
+
+    .cell:first-child {
+        background-color: #4A91F5;
+        /*background-image: linear-gradient(to bottom right, #4A91F5, #4DF0FF);*/
+        border-radius: 12px 12px 0 0;
+        position: relative;
+        top: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        text-align: left;
+        /*width: 100%;*/
+        /*max-width: 100%;*/
+    }
+    .cell:not(:first-child) {
+        clear: both;
+        padding: 7px 20px 7px 90px;
+        position: relative;
+
+    }
+    .cell:not(:first-child):before {
+        color: #4A91F5;
+        font-weight: 600;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        padding-left: 40px;
+        text-align: left;
+        margin-right: 100px;
+    }
+
+
+    .cell:nth-child(2):before {
+        content: '모집인원';
+    }
+    .cell:nth-child(3):before {
+        content: '교육기간';
+    }
+    .cell:nth-child(4):before {
+        content: '혜택';
+    }
+    .cell:nth-child(5):before {
+        content: '선발과정';
+    }
+
+
+    .row, .rowtitle {
+        padding: 0px 0;
+        position: relative;
+        padding: 0 0 0.5rem 0;
+        margin-bottom: 1rem;
+    }
+    .row:first-child, .rowtitle:first-child {
+        display: none;
+    }
+    .cell:last-child {
+        /*padding-bottom: 1rem !important;*/
+        border-radius: 0 0 12px 12px;
+    }
+    .table, .row {
+        border-radius: 0 0 12px 12px;
+        background-color: transparent;
+    }
+
+
+    .thetable .row:nth-child(2n+1), .thetable .row:nth-child(2n) {
+        background-color: #DAE4F2;
+    }
+    .row:last-child {
+        /*background-color: transparent;*/
+        margin-bottom: 0;
+    }
+    .thetable .row:last-child {
+        padding-bottom: 0;
+    }
+    .users {
+        background-color: #DAE4F2;
+    }
+
+}
+
+
+
+@media only screen and (orientation: landscape) {
+  .mobileheader { display: none; }
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .badges {
+        width: 94%;
+        margin: 0 auto;
+        padding-right: 5px;
+        padding-bottom: 45px;
+
+    }
+
+    .badge {
+        max-width: 130px;
+        display: inline;
+        padding-left: 8px;
+        float: right;
+        padding-right: 0px;
+    }
+
+    .tooltip {
+        padding-left: 3px;
+        font-size: 11px;
+    }
+
+
+    .thetable .row {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .users {
+
+        background-color: #DAE4F2;
+        box-sizing: content-box;
+        /*background-image: linear-gradient(to bottom, #4A91F5, #4DF0FF);*/
+    }
+    .cell:nth-child(2n) {
+        background-color: #F2F8FF;
+    }
+
+    .cell:nth-child(2n+1) {
+        background-color: white;
+    }
+
+    .cell:first-child {
+        margin-top: 0;
+        position: relative;
+        top: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        width: 100%;
+        background-color: #4A91F5;
+    }
+
+    .cell:not(:first-child) {
+        margin: 0;
+        padding: 5px 1em;
+        width: 100%;
+    }
+
+    .thetable .cell:not(:first-child) {
+        padding-left: 14px;
+        text-align: center;
+    }
+
+    .thetable .cell {
+        text-align: center;
+    }
+
+    .cell:not(:first-child):before {
+        font-size: .8em;
+        padding-top: 0.3em;
+        position: relative;
+        padding-left: 0;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 3px;
+    }
+
+    .thetable .cellheader {
+        padding: 0;
+    }
+
+    .cell:last-child {
+        padding-bottom: 1rem !important;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .cell, .cellheader {
+        /*border: 1px solid #4A91F5;*/
+        /*border-image: linear-gradient(to bottom, #4A91F5, #4DF0FF);*/
+        border-width: 0;
+    }
+
+
+
+    .row, .rowtitle {
+        /*background-color: white !important;*/
+        /*border: 1px solid #F2F8FF ;*/
+        border-width: 0;
+        /*border-image: linear-gradient(to bottom, #4A91F5, #4DF0FF);*/
+        border-radius: 12px;
+        /*box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);*/
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+
+    .users {
+        border: none;
+        /*box-shadow: none;*/
+        overflow: visible;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .badges {
+        width: 94%;
+        margin: 0 auto;
+        padding-right: 7px;
+        padding-bottom: 55px;
+        text-align: center;
+        content-align: center;
+    }
+
+    .badge {
+        max-width: 130px;
+        display: inline;
+        padding-left: 0px;
+        /*float: right;*/
+        padding-right: 0px;
+        content-align: center;
+    }
+
+    .tooltip {
+        display: block;
+        text-align: center;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 11px;
+    }
+
+}

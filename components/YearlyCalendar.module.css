@@ -1,0 +1,287 @@
+@media only screen and (orientation: portrait) {
+  .landscape_only  { display: none; }
+  .webheader { display: none; }
+  .websubtitle { display: none; }
+}
+
+.header {
+  color: #202125;
+  margin-bottom: 0px;
+}
+.header h2 {
+  font-weight: 600;
+}
+.header p {
+  font-weight: 300;
+}
+.wrapper {
+  font-family: 'NanumBarunGothic';
+  font-weight: 800;
+  text-align: center;
+  font-size: 18px;
+  max-width: 1200px;
+  min-width: 700px;
+  margin: 0 auto;
+  width: 92%;
+  font-family: "NanumBarunGothic";
+}
+.gantt {
+  display: grid;
+  border: 0;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 75px 125px -57px #7e8f94;
+}
+.gantt__row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  background-color: #fff;
+}
+
+.current_week {
+  display: block;
+  border-right: 1px solid rgba(236, 15, 15, 0.1);
+  position: absolute;
+  height: 200%;
+  width: 100%;
+  background-color: transparent;
+  grid-template-columns: 150px repeat(12, 1fr); /*경계선 : repeat 함수로 쪼갤 수 있음*/ 
+}
+
+/* 42seoul 배경색 통일 */
+.gantt__row:nth-child(4) {
+  background-color: #F2F8FF;
+}
+
+.gantt__row:nth-child(4) .gantt__row__first {
+  background-color: #F2F8FF;
+}
+
+.gantt__row:nth-child(odd) {
+  background-color: #F2F8FF;
+}
+
+.gantt__row:nth-child(odd) .gantt__row__first {
+  background-color: #F2F8FF;
+}
+
+.gantt__row:nth-child(3) .gantt__row__bars {
+  border-top: 0;
+}
+
+.gantt__row:nth-child(3) .gantt__row__first {
+  border-top: 0;
+}
+
+.gantt__row__empty {
+  background-color: #ffd6d2 !important;
+  z-index: 1;
+}
+
+.gantt__row__empty .gantt__row__first {
+  border-width: 1px 1px 0 0;
+}
+
+.gantt__row__lines {
+  position: absolute;
+  height: 200%;
+  width: 100%;
+  background-color: transparent;
+  grid-template-columns: 150px repeat(12, 1fr); /*경계선 : repeat 함수로 쪼갤 수 있음*/ 
+}
+
+.gantt__row__lines span:nth-child(1) {
+  display: block;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gantt__row__lines span.current_marker {
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.gantt__row__lines:after {
+  grid-row: 1;
+  grid-column: 0;
+  background-color: #1688b345;
+  z-index: 2;
+  height: 100%;
+}
+
+.gantt__row__months {
+  color: #fff;
+  background-color: #4A91F5 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  grid-template-columns: 150px repeat(12, 1fr); /*1~12월 : repeat 함수로 쪼갤 수 있음*/
+}
+
+.gantt__row__months .gantt__row__first {
+  border-top: 0 !important;
+  background-color: #4A91F5 !important;
+}
+
+.gantt__row__first a:hover {
+  text-decoration: none;
+}
+
+.gantt__row__months span {
+  text-align: center;
+  font-size: 15px;
+  align-self: center;
+  font-weight: bold;
+  padding: 20px 0;
+  
+}
+.gantt__row__first {
+  background-color: #fff;
+  border-width: 1px 0 0 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  padding: 15px 0;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  font-weight: 800;
+}
+
+.gantt__row__first span{
+  color: #4A91F5;
+  font-size: 15px;
+}
+
+.gantt__row__first .gisu{
+  color: #89A1C3;
+  font-size: 12px;
+}
+
+.gantt__row__first a{
+  position: relative;
+  z-index: 1;
+}
+
+.gantt__row__bars {
+  list-style: none;
+  display: grid;
+  padding: 9px 0;
+  margin: 0;
+  grid-template-columns: repeat(365, 1fr); /* 칸 : repeat 함수로 쪼갤 수 있음*/
+  grid-gap: 8px 0;
+  border-top: 1px solid rgba(221, 221, 221, 0.8);
+}
+.gantt__row__bars li {
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  height: 25px;
+  padding: 4px 0px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  border-radius: 13px;
+  margin-top: 3px;
+}
+
+.gantt__row__bars .next_year {
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  height: 25px;
+  padding: 4px 12px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  border-radius: 13px 1px 1px 13px;
+  position: relative;
+  right: -1%;
+}
+
+.gantt__row__bars li.stripes {
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.1) 5px, rgba(255, 255, 255, 0.1) 12px);
+}
+.gantt__row__bars li:before, .gantt__row__bars li:after {
+  content: "";
+  height: 100%;
+  top: 0;
+  z-index: 4;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.gantt__row__bars li:before {
+  left: 0;
+}
+.gantt__row__bars li:after {
+  right: 0;
+}
+
+/* calendar hover  */
+.calendar_entry {
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  color: white;
+  font-family: 'NanumBarunGothic';
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.calendar_entry__title {
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.04);
+}
+.calendar_entry__date {
+  font-size: 11px;
+  opacity: 0;
+  transition: 0.3s;
+  height: 0;
+  visibility: hidden;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.04);
+  z-index: 100000;
+}
+
+.calendar_entry:hover {
+  height: 65px;
+  width: 200px;
+  cursor: default;
+  margin: 0;
+  padding: 3px;
+  -webkit-box-shadow: 1px 2px 10px 0px rgba(32, 41, 56, 0.4);
+  -moz-box-shadow: 1px 2px 10px 0px rgba(32, 41, 56, 0.4);
+  box-shadow: 1px 2px 10px 0px rgba(32, 41, 56, 0.4);
+}
+
+.calendar_entry:hover .calendar_entry__date {
+  opacity: 1;
+  height: 15px;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.oversize_list:hover {
+  height: 65px;
+  width: auto;
+  cursor: default;
+  -webkit-box-shadow: 1px 2px 10px 0px rgba(32, 41, 56, 0.4);
+  -moz-box-shadow: 1px 2px 10px 0px rgba(32, 41, 56, 0.4);
+  box-shadow: 1px 2px 10px 0px rgba(32, 41, 56, 0.4);
+}
+
+@media screen and (max-width: 1200px) {
+  .calendar_entry__title {
+  font-size: 10px;
+  }
+
+  .calendar_entry:hover .calendar_entry__date, .calendar_entry__title {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+.footer {
+  padding: 60px 0 40px 0;
+  margin-top: 150px;
+  display: block;
+  min-height: 180px;
+  width: 100%;
+  text-align: center;
+  background-color: #4A91F5;
+  line-height: 1.3;
+}
+
+.list {
+  display: flex;
+  margin: 5px 0 5px 0;
+}
+
+.footer ul {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  justify-items: center;
+  margin: auto;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.footer a {
+  font-family: 'NanumBarunGothic';
+  font-size: medium;
+  color: white;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: #A0C5FA;
+}
+
+.footer p:hover {
+  animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.copyright {
+  font-size: small;
+  color: white;
+}
