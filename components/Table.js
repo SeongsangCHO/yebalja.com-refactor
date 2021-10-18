@@ -11,6 +11,7 @@ export default function Table() {
     const res = await getProgramTable();
     setTableData(res);
   };
+
   useEffect(() => {
     fetchData();
   }, []);

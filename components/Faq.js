@@ -5,7 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import classNames from "classnames";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { getFaqs } from "../utils/api";
 
 function QnA({ list }) {
@@ -62,6 +62,7 @@ function FaqTab({ subList }) {
 export default function Faq() {
   const program = useSelector((state) => state.programReducer.data);
   const [faqData, setFaqData] = useState([]);
+
   const fetchData = async () => {
     const res = await getFaqs();
     setFaqData(res);
