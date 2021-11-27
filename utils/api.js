@@ -1,5 +1,6 @@
 import axios from "axios";
-const BASE_URL = `http://localhost:8080`;
+// const BASE_URL = `http://localhost:8080`;
+const BASE_URL = `http://test.yebalja.com`;
 const END_POINT = {
   yearlycalendar: "/api/yearlycalendar",
   timelinelist: "/api/timelinelist",
